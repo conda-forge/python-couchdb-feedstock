@@ -4,7 +4,7 @@
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
 {%set hash_val = "9503ea413956c33b5e2af248235afb5e0f011f33f816a32e872f8ff9b0a0e710" %}
-{%set build_num = "0" %}
+{%set build_num = "1" %}
 
 package:
   name: {{ conda_forge_name }}
