@@ -1,9 +1,9 @@
 {%set conda_forge_name = "python-couchdb" %}
 {%set name = "CouchDB" %}
-{%set version = "1.1" %}
+{%set version = "1.2" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "9503ea413956c33b5e2af248235afb5e0f011f33f816a32e872f8ff9b0a0e710" %}
+{%set hash_val = "1386a1a43f25bed3667e3b805222054940d674fa1967fa48e9d2012a18630ab7" %}
 {%set build_num = "1" %}
 
 package:
@@ -23,7 +23,7 @@ build:
     - couchdb-replicate = couchdb.tools.replicate:main
     - couchdb-load-design-doc = couchdb.loader:main
 
-  number: {{ build_num }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
