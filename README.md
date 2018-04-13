@@ -14,9 +14,7 @@ Summary: Python library for working with CouchDB
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-couchdb-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-couchdb-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-couchdb-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-couchdb-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-couchdb-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-couchdb-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/python-couchdb-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-couchdb-feedstock)
 
 Current release info
 ====================
