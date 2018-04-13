@@ -4,7 +4,6 @@
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
 {%set hash_val = "1386a1a43f25bed3667e3b805222054940d674fa1967fa48e9d2012a18630ab7" %}
-{%set build_num = "1" %}
 
 package:
   name: {{ conda_forge_name }}
@@ -12,19 +11,19 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
+  noarch: python
   entry_points:
     - couchpy = couchdb.view:main
     - couchdb-dump = couchdb.tools.dump:main
     - couchdb-load = couchdb.tools.load:main
     - couchdb-replicate = couchdb.tools.replicate:main
     - couchdb-load-design-doc = couchdb.loader:main
-
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
