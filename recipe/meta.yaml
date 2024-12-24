@@ -22,18 +22,20 @@ build:
     - couchdb-load = couchdb.tools.load:main
     - couchdb-replicate = couchdb.tools.replicate:main
     - couchdb-load-design-doc = couchdb.loader:main
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python
+  host:
+    - python {{ python_min }}
     - pip
 
   run:
-    - python
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - couchdb
     - couchdb.tests
